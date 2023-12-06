@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --theme-blue: #3B73E8;
+  --bg-blue: #5FA8D3;
+  --bg-shallow-blue: #CAE9FF;
+  --theme-darkblue: #003366;
+  --theme-black: #3D3D3D;
+  --theme-gray: #C0C0C0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +23,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Poppins;
+  color: var(--theme-black);
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient( */
+      /* to bottom, */
+      /* transparent, */
+      /* rgb(var(--background-end-rgb)) */
+    /* ) */
+    /* rgb(var(--background-start-rgb)); */
 }
