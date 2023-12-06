@@ -27,6 +27,9 @@ const bgPotions = {
   backgroundPosition: 'left top, right top, right bottom, left bottom',
   backgroundSize: '15%, 15%, 15% 50%'
 }
+const gridPreview = [
+  
+]
 
 export default function Home() {
   let [collapsesSwitch, toggleCollapseSwitch] = useState( [ false, true, false ] )
@@ -53,7 +56,6 @@ export default function Home() {
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
             href=""
-            target="_blank"
             rel=""
           >
             <Image
@@ -191,7 +193,7 @@ export default function Home() {
           </a>
         </div> */}
 
-        <article className='max-w-[68.9375rem] py-20 grid grid-cols-3 gap-x-[4rem] gap-y-10 pb-60'>
+        <article className='max-w-[68.9375rem] py-20 grid grid-cols-[1fr_1fr_1fr] gap-x-[4rem] gap-y-10 pb-60' style={gridPreview}>
           <Image
             className="cursor-pointer h-auto w-full rounded-[30px] col-start-1 col-end-1"
             src="/home/custom-left-top-product.png"
@@ -210,15 +212,16 @@ export default function Home() {
             sizes='100%'
             priority
           />
+          {/* max-w-[220%] */}
           <Image
-              className="max-w-[220%] w-auto rounded-[30px] col-start-2 col-end-3 row-[1/_span_2]"
-              src="/home/default-product.png"
-              alt=""
-              width={0}
-              height={0}
-              sizes='100%'
-              priority
-            />
+            className="max-w-[none] w-full block rounded-[30px] col-[2/4] row-[1/3] j"
+            src="/home/default-product.png"
+            alt=""
+            width={0}
+            height={0}
+            sizes='100%'
+            priority
+          />
         </article>
 
         <article className='pb-80 max-w-[68.9375rem] w-full'>
@@ -360,7 +363,7 @@ export default function Home() {
       <article className='max-w-[68.9375rem] w-full mb-60'>
         <div className='text-center text-[3.4375rem] font-semibold pb-[122px]'>Questions?</div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between cursor-pointer pb-8' onClick={ handleSetFirstCollapseSwitch }>
+          <div className='w-full flex justify-between cursor-pointer pb-10' onClick={ handleSetFirstCollapseSwitch }>
             <span className='text-4xl'>How to get started?</span>
             <Image
               className={`${firstCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-[1.5625rem] w-[3.125rem]`}
@@ -381,7 +384,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between cursor-pointer pb-8' onClick={ handleSetSecondCollapseSwitch }>
+          <div className='w-full flex justify-between cursor-pointer pb-10' onClick={ handleSetSecondCollapseSwitch }>
             <span className='text-4xl'>Can you take product photos for me?</span>
             <Image
               className={`${secondCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-[1.5625rem] w-[3.125rem]`}
@@ -402,7 +405,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between cursor-pointer pb-8' onClick={ handleSetThirdCollapseSwitch }>
+          <div className='w-full flex justify-between cursor-pointer pb-10' onClick={ handleSetThirdCollapseSwitch }>
             <span className='text-4xl'>Do you provide additional editing services?</span>
             <Image
               className={`${thirdCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-[1.5625rem] w-[3.125rem]`}
