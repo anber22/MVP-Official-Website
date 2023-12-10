@@ -363,7 +363,7 @@ export default function Home() {
         </div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
           <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetFourthCollapseSwitch }>
-            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>What if I don't have a clean product photo?</span>
+            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>{`What if I don't have a clean product photo?`}</span>
             <Image
               className={`${fourthCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-3 sm:h-4 md:h-[1.5625rem] w-6 sm:w-8 md:w-[3.125rem]`}
               src="/common/black-Inverted-triangle.png"
