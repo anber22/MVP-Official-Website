@@ -53,7 +53,7 @@ export default function Home() {
   let [menuCollapseSwitch, setMenuCollapse] = useState(false)
   const handleSetMenuCollapseSwitch = () => setMenuCollapse(!menuCollapseSwitch)
   return (
-    <div className={`flex min-h-screen flex-col items-center justify-between `}>
+    <div className={`flex min-h-screen flex-col items-center justify-between`}>
       <header className="z-40 w-full items-center justify-between text-sm flex px-3 lg:px-12 sticky top-0 pt-4 sm:pt-6 bg-white">
         <div className=" bottom-0 left-0 flex h-auto items-end bg-gradient-to-t from-white via-white static ">
           <a
