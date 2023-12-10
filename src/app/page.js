@@ -50,6 +50,8 @@ export default function Home() {
   const handleSetSecondCollapseSwitch = () => setSecondCollapseSwitch(!secondCollapseSwitch)
   let [thirdCollapseSwitch, setThirdCollapseSwitch] = useState(false)
   const handleSetThirdCollapseSwitch = () => setThirdCollapseSwitch(!thirdCollapseSwitch)
+  let [fourthCollapseSwitch, setFourthCollapseSwitch] = useState(false)
+  const handleSetFourthCollapseSwitch = () => setFourthCollapseSwitch(!fourthCollapseSwitch)
   let [menuCollapseSwitch, setMenuCollapse] = useState(false)
   const handleSetMenuCollapseSwitch = () => setMenuCollapse(!menuCollapseSwitch)
   return (
@@ -297,11 +299,11 @@ export default function Home() {
       </div>
 
 
-      <article className='px-8 sm:px-10 md:px-12 lg:max-w-[68.9375rem] w-full mb-30 md:mb-40 lg:mb-60'>
+      <article className='px-6 lg:max-w-[68.9375rem] w-full mb-30 md:mb-40 lg:mb-60'>
         <div className='text-center text-4xl sm:text-6xl lg:text-[3.4375rem] font-semibold pb-16 sm:pb-20 md:pb-24 lg:pb-[122px]'>Questions?</div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between items-center cursor-pointer' onClick={ handleSetFirstCollapseSwitch }>
-            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>How to get started?</span>
+          <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetFirstCollapseSwitch }>
+            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>Is AI ProShots free to use?</span>
             <Image
               className={`${firstCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-3 sm:h-4 md:h-[1.5625rem] w-6 sm:w-8 md:w-[3.125rem]`}
               src="/common/black-Inverted-triangle.png"
@@ -315,14 +317,13 @@ export default function Home() {
           <div className='text-base sm:text-xl md:text-2xl'>
             {firstCollapseSwitch &&
               <div>
-                <div className='py-6'>Yes, absolutely. A clean and great quality product photo will help a lot.</div>
-                <div className='py-6'>When you create a new product, instead of uploading your product photo, just choose the option to let our team take the photos for you.</div>
+                <div className='pb-6'>Yes, absolutely. A clean and great quality product photo will help a lot.</div>
               </div>}
           </div>
         </div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between items-center cursor-pointer' onClick={ handleSetSecondCollapseSwitch }>
-            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>Can you take product photos for me?</span>
+          <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetSecondCollapseSwitch }>
+            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>How does AI ProShots work?</span>
             <Image
               className={`${secondCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-3 sm:h-4 md:h-[1.5625rem] w-6 sm:w-8 md:w-[3.125rem]`}
               src="/common/black-Inverted-triangle.png"
@@ -336,14 +337,13 @@ export default function Home() {
           <div className='text-base sm:text-lg md:text-xl lg:text-2xl'>
             {secondCollapseSwitch &&
               <div>
-                <div className='py-6'>Yes, absolutely. A clean and great quality product photo will help a lot.</div>
-                <div className='py-6'>When you create a new product, instead of uploading your product photo, just choose the option to let our team take the photos for you.</div>
+                <div className='pb-6'>Simply upload a clean product photo and describe your desired scene or background to the AI. Our system will then generate new, high-quality images using our unique algorithm.</div>
               </div>}
           </div>
         </div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
-          <div className='w-full flex justify-between items-center cursor-pointer' onClick={ handleSetThirdCollapseSwitch }>
-            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>Do you provide additional editing services?</span>
+          <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetThirdCollapseSwitch }>
+            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>What sets AI ProShots apart in terms of image quality?</span>
             <Image
               className={`${thirdCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-3 sm:h-4 md:h-[1.5625rem] w-6 sm:w-8 md:w-[3.125rem]`}
               src="/common/black-Inverted-triangle.png"
@@ -357,8 +357,27 @@ export default function Home() {
           <div className='text-base sm:text-xl md:text-2xl'>
             {thirdCollapseSwitch &&
               <div>
-                <div className='py-6'>Yes, absolutely. A clean and great quality product photo will help a lot.</div>
-                <div className='py-6'>When you create a new product, instead of uploading your product photo, just choose the option to let our team take the photos for you.</div>
+                <div className='pb-6'>AI ProShots uses a specialized algorithm optimized for beauty and skincare products. This ensures that the generated images meet high-quality standards, setting us apart from other AI image generation websites.</div>
+              </div>}
+          </div>
+        </div>
+        <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
+          <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetFourthCollapseSwitch }>
+            <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>What if I don't have a clean product photo?</span>
+            <Image
+              className={`${fourthCollapseSwitch ? 'rotate-180' : ''} cursor-pointer h-3 sm:h-4 md:h-[1.5625rem] w-6 sm:w-8 md:w-[3.125rem]`}
+              src="/common/black-Inverted-triangle.png"
+              alt=""
+              width={0}
+              height={0}
+              sizes='100%'
+              priority
+            />
+          </div>
+          <div className='text-base sm:text-xl md:text-2xl'>
+            {fourthCollapseSwitch &&
+              <div>
+                <div className='pb-6'>No worries! You can ship your product to us, and our professional setup will capture high-quality photos for you. This ensures that you have the best input for the AI to generate stunning images for your product.</div>
               </div>}
           </div>
         </div>
