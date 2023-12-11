@@ -132,7 +132,7 @@ export default function Home() {
           </div>
         </article>
 
-        <article className='max-w-none w-full md:max-w-[68.9375rem] py-10 md:py-20 grid grid-cols-[1fr_1fr_1fr] gap-x-4 md:gap-x-[4rem] gap-y-10 pb-20 sm:pb-40 lg:pb-60'>
+        <article className='max-w-none w-full md:max-w-[68.9375rem] py-10 md:py-20 grid grid-cols-[1fr_1fr_1fr] gap-x-4 md:gap-x-[2rem] gap-y-6 pb-20 sm:pb-40 lg:pb-60'>
           <Image
             className="cursor-pointer h-auto w-full rounded-[30px] col-start-1 col-end-1"
             src="/home/custom-left-top-product.png"
@@ -153,7 +153,7 @@ export default function Home() {
           />
           {/* max-w-[220%] */}
           <Image
-            className="max-w-[none] w-full h-full block rounded-[30px] col-[2/4] row-[1/3] "
+            className="max-w-[none] w-full rounded-[30px] col-[2/4] row-[1/3] "
             src="/home/default-product.png"
             alt=""
             width={0}
