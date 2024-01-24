@@ -73,10 +73,10 @@ export default function Home() {
 
       
       <article className='w-full flex flex-col items-center py-[4rem] sm:py-[6rem] md:py-[8rem] lg:py-[10rem]'>
-        <h1 className='z-0 font-semibold text-[--theme-gray] xl:text-[12.5rem] lg:text-[9.5rem] md:text-8xl max-[400px]:text-5xl max-[325px]:text-4xl max-[200px]:text-3xl text-6xl'>AI ProShots</h1>
-        <div className='z-1 relative w-full h-[32px] sm:h-[5vw] bg-[--theme-darkblue] top-[-1.2vw] md:top-[-1.4vw] lg:top-[-1.4vw] xl:top-[-1.6vw]  flex justify-around items-end'>
-          <span className='text-xs sm:text-sm md:text-base text-white'>Unleash the power of AI.</span>
-          <span className='tittle-line h-[1px] md:h-[2px] w-40 bg-white mb-1 lg:mb-4'/>
+        <h1 className='z-0 font-semibold text-[--theme-gray] text-6xl max-[270px]:text-4xl max-[340px]:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1>
+        <div className='z-1 relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-10px] md:top-[-20px] lg:top-[-30px] xl:top-[-40px] flex justify-around items-end'>
+          <span className='hidden sm:block text-xs sm:text-sm md:text-base text-white'>Unleash the power of AI.</span>
+          <span className='hidden sm:block tittle-line h-[1px] md:h-[2px] w-40 bg-white mb-1 lg:mb-4'/>
         </div>
       </article>
       
