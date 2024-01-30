@@ -260,7 +260,7 @@ export default function Home() {
           <p className='text-xl sm:text-2xl md:text-3xl pb-10 sm:pb-[6.4375rem]'>
             Yep, you read that right! Free to start. Our free tier is so good, even chickens are crossing roads for it! 
           </p>
-          <div className='rounded-[50px] sm:py-3 md:py-5 bg-white w-full md:w-[18.75rem] text-center text-black leading-[3.4375rem] text-xl sm:text-2xl font-medium cursor-pointer'>Join Now</div>
+          <div className='rounded-[50px] sm:py-3 md:py-5 bg-white w-full md:w-[18.75rem] text-center text-black leading-[2.5rem] sm:leading-[3.4375rem] text-lg sm:text-xl md:text-2xl font-medium cursor-pointer'>Join Now</div>
         </div> 
       </article>
       
@@ -362,7 +362,7 @@ export default function Home() {
       </article>
 
       <footer className='bg-[--theme-darkblue] w-full text-white py-[3.5rem]'>
-        <div className='text-center text-[2rem] font-semibold sm:mb-[7.1875rem]'>AI ProShots</div>
+        <div className='text-center text-2xl sm:text-[2rem] font-semibold sm:mb-[7.1875rem]'>AI ProShots</div>
         <article className='flex justify-around max-sm:hidden'>
           <div className='flex gap-x-[4.125rem] text-sm'>
             <span className='cursor-pointer'> Terms & Conditions </span>
