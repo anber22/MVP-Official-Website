@@ -12,7 +12,7 @@ const bgPotions = {
   backgroundSize: '15%, 15%, 15% 40%' 
   // 21%, 31%, 15% 21%;
 }
-const collapsePaneStyle = 'z-3 top-[47px] sm:top-[55px] absolute left-[0] w-full bg-white max-lg:block text-red rounded-b-2xl shadow-xl'
+const collapsePaneStyle = 'z-3 top-[63px] sm:top-[55px] absolute left-[0] w-full bg-white max-lg:block text-red rounded-b-2xl shadow-xl'
 export default function Home() {
   let [collapsesSwitch, toggleCollapseSwitch] = useState( [ false, true, false ] )
   // collapses switch
@@ -29,7 +29,7 @@ export default function Home() {
   const handleSetMenuCollapseSwitch = () => setMenuCollapse(!menuCollapseSwitch)
   return (
     <div className={`flex min-h-screen flex-col items-center justify-between`}>
-      <header className="z-40 w-full items-center justify-between text-sm flex px-3 lg:px-12 sticky top-0 pt-4 sm:pt-6 bg-white">
+      <header className="z-40 w-full items-center justify-between text-sm flex px-3 lg:px-12 sticky top-0 py-4 sm:pt-6 bg-white">
         <div className=" bottom-0 left-0 flex h-auto items-end bg-gradient-to-t from-white via-white static ">
           <a
             className="pointer-events-auto flex place-items-center gap-2 p-0"
@@ -56,7 +56,7 @@ export default function Home() {
         </ul>
         <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
           <div className='flex gap-x-8'>
-            <span className='cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Try it</span>
+            <span className='text-[10px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Try it</span>
             <Image
               onClick={handleSetMenuCollapseSwitch}
               className="w-6 h-6 lg:hidden"
@@ -73,7 +73,7 @@ export default function Home() {
 
       
       <article className='w-full flex flex-col items-center py-[4rem] sm:py-[6rem] md:py-[8rem] lg:py-[10rem]'>
-        <h1 className='z-0 font-semibold text-[--theme-gray] text-6xl max-[270px]:text-4xl max-[340px]:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1>
+        <h1 className='z-0 font-semibold text-[--theme-gray] text-5xl max-[270px]:text-4xl max-[340px]:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1>
         <div className='z-1 relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-10px] md:top-[-20px] lg:top-[-30px] xl:top-[-40px] flex justify-around items-end'>
           <span className='hidden sm:block text-xs sm:text-sm md:text-base text-white'>Unleash the power of AI.</span>
           <span className='hidden sm:block tittle-line h-[1px] md:h-[2px] w-40 bg-white mb-1 lg:mb-4'/>
@@ -81,7 +81,7 @@ export default function Home() {
       </article>
       
       <div className='px-6 flex flex-col items-center lg:px-24 md:px-10'>  
-        <article className='text-[2.25rem] sm:text-[3.4375rem] font-semibold text-center '>
+        <article className='text-[1.75rem] sm:text-[3.4375rem] font-semibold text-center '>
           <strong>
             <div>Revolutionize</div>
             your product photos with AI
@@ -101,10 +101,10 @@ export default function Home() {
             />
           </div>
           <div className='flex flex-col gap-y-6'>
-            <div className='w-full h-full border border-[#767676] border-solid rounded-[1.875rem] p-10 text-4xl'>
+            <div className='w-full h-full border border-[#767676] border-solid rounded-[1.875rem] p-6 md:p-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl'>
               My product on a soft surface with pillows and flowers. Luxury, bright.
             </div>
-            <span className='text-white block bg-[--theme-darkblue] rounded-[30px] text-center py-5 font-medium text-3xl md:text-4xl cursor-pointer '>Generate</span>
+            <span className='text-white block bg-[--theme-darkblue] rounded-[30px] text-center py-2 md:py-5 font-medium text-xl md:text-4xl cursor-pointer '>Generate</span>
           </div>
         </article>
 
@@ -140,7 +140,7 @@ export default function Home() {
         </article>
 
         <article className='pb-20 sm:pb-40 md:pb-60 lg:pb-80 max-w-[68.9375rem] w-full sm:text-xl'>
-          <p className="text-4xl sm:text-5xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center ">How it works</p>
+          <p className="text-2xl sm:text-3xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center mb-2">How it works</p>
           {/* rounded-[40px] border-[3px] border-[--theme-black] */}
           {/* bg-[url('/home/border-left-top.png'),url('/home/border-top-right.png'),url('/home/border-right-bottom.png'),url('/home/border-left-bottom.png')] */}
           <div
@@ -153,7 +153,7 @@ export default function Home() {
           >
             <div>
               <d className='flex items-center mb-6 gap-x-4 sm:gap-x-8 md:gap-x-[2.625rem]'>
-                <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl '>Step 1</span>
+                <span className='text-lg sm:text-2xl md:text-3xl lg:text-4xl '>Step 1</span>
                 <Image
                   className="inline w-6 md:w-9 h-[1.2rem] md:h-[1.875rem]"
 
@@ -170,7 +170,7 @@ export default function Home() {
 
             <div>
               <div className='flex items-center mb-6 gap-x-4 sm:gap-x-8 md:gap-x-[2.625rem]'>
-                <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl '>Step 2</span>
+                <span className='text-lg sm:text-2xl md:text-3xl lg:text-4xl '>Step 2</span>
                 <Image
                   className="inline w-6 md:w-[1.875rem] h-6 md:h-7"
                   src="/home/pen.png"
@@ -186,7 +186,7 @@ export default function Home() {
 
             <div>
               <div className='flex items-center mb-6 gap-x-4 sm:gap-x-8 md:gap-x-[2.625rem]'>
-                <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl '>Step 3</span>
+                <span className='text-lg sm:text-2xl md:text-3xl lg:text-4xl '>Step 3</span>
                 <Image
                   className="inline w-7 h-7 md:w-9 md:h-9"
                   src="/home/setting.png"
@@ -202,7 +202,7 @@ export default function Home() {
 
             <div>
               <div className='flex items-center mb-6 gap-x-4 sm:gap-x-8 md:gap-x-[2.625rem]'>
-                <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl '>Step 4</span>
+                <span className='text-lg sm:text-2xl md:text-3xl lg:text-4xl '>Step 4</span>
                 <Image
                   className="inline w-6 md:w-[1.875rem] h-6 md:h-[1.875rem]"
                   src="/home/pic.png"
@@ -216,15 +216,15 @@ export default function Home() {
               <div className='text-base min-w-[365px]:text-lg sm:text-xl md:text-2xl'>Get your perfect images.</div>
             </div>
           </div>
-          <div className='text-xl sm:text-2xl w-40 sm:w-60 md:w-[18.75rem] h-10 sm:h-14 rounded-[50px] text-white bg-[--theme-blue] flex justify-center items-center cursor-pointer mx-auto mt-[-1.875rem]'>Free to Try</div>
+          <div className='text-lg sm:text-2xl w-40 sm:w-60 md:w-[18.75rem] h-10 sm:h-14 rounded-[50px] text-white bg-[--theme-blue] flex justify-center items-center cursor-pointer mx-auto mt-[-1.875rem]'>Free to Try</div>
         </article>
 
         <article className='pb-20 sm:pb-40 md:pb-60 lg:pb-80'>
-          <p className='text-center text-[2.25rem] sm:text-[3.4375rem] row-start-1 col-start-1 col-end-2 pb-[3.125rem]'>AI ProShots vs. Others</p>
-          <p className='text-center text-2xl pb-10 sm:pb-16 md:pb-[5.3125rem]'>Real experiment done with the same image, same prompt, and same time.</p>
+          <p className='text-center text-[1.7rem] sm:text-[3.4375rem] row-start-1 col-start-1 col-end-2 pb-[3.125rem]'>AI ProShots vs. Others</p>
+          <p className='text-center text-xl sm:text-2xl md:text-3xl pb-10 sm:pb-16 md:pb-[5.3125rem]'>Real experiment done with the same image, same prompt, and same time.</p>
           <div className='grid grid-cols-2 gap-x-4 md:gap-x-[6.5rem] pb-16 sm:pb-20 md:pb-24 lg:pb-[8.25rem]'>
-            <div className='text-2xl sm:text-3xl md:text-4xl text-center pb-4'>AI ProShots</div>
-            <div className='text-2xl sm:text-3xl md:text-4xl text-center pb-4'>Another Website</div>
+            <div className='text-lg sm:text-3xl md:text-4xl text-center pb-4'>AI ProShots</div>
+            <div className='text-lg sm:text-3xl md:text-4xl text-center pb-4'>Another Website</div>
             <div>
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
@@ -253,22 +253,22 @@ export default function Home() {
       </div>
 
 
-      <article className='text-white bg-[--bg-shallow-blue] w-full grid grid-cols-4 mb-32'>
+      <article className='text-white bg-[--bg-shallow-blue] w-full grid grid-cols-4 mb-16 sm:mb-32'>
         <div className='inline bg-[--bg-blue] col-span-4 md:col-span-3 px-6 py-14 lg:pl-[4.625rem] lg:pr-[3.125rem]'>
-          <p className='text-4xl sm:text-5xl md:text-5xl lg:text-[3.4375rem] pb-4'>Why did the chicken cross the road?</p>
-          <p className='text-4xl sm:text-5xl md:text-5xl lg:text-[3.4375rem] pb-14'>To get our FREE tier!</p>
-          <p className='text-2xl sm:text-3xl md:text-4xl pb-[6.4375rem]'>
+          <p className='text-xl sm:text-2xl md:text-3xl lg:text-[3.4375rem] pb-4'>Why did the chicken cross the road?</p>
+          <p className='text-xl sm:text-2xl md:text-3xl lg:text-[3.4375rem] pb-14'>To get our FREE tier!</p>
+          <p className='text-xl sm:text-2xl md:text-3xl pb-10 sm:pb-[6.4375rem]'>
             Yep, you read that right! Free to start. Our free tier is so good, even chickens are crossing roads for it! 
           </p>
-          <div className='rounded-[50px] md:h-[3.4375rem] bg-white w-full md:w-[18.75rem] text-center text-black leading-[3.4375rem] text-2xl font-medium cursor-pointer'>Join Now</div>
+          <div className='rounded-[50px] sm:py-3 md:py-5 bg-white w-full md:w-[18.75rem] text-center text-black leading-[3.4375rem] text-xl sm:text-2xl font-medium cursor-pointer'>Join Now</div>
         </div> 
       </article>
       
       
-      <div className='text-4xl sm:text-5xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center max-w-3xl mb-16 px-4 sm:px-0'>
+      <div className='text-[1.7rem] sm:text-5xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center max-w-3xl mb-16 px-4 sm:px-0'>
         How does Generative AI help with Product Photos?
       </div>
-      <div className='text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[68.9375rem] mb-32 px-8 sm:px-10 lg:px-12 xl:px-0'>
+      <div className='text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[68.9375rem] mb-16 sm:mb-32 px-8 sm:px-10 lg:px-12 xl:px-0'>
         AI inspires and augments human creativity.
         It helps generate new ideas and designs. Meanwhile,
         it automates and accelerates the process of testing different ideas.
@@ -278,7 +278,7 @@ export default function Home() {
 
 
       <article className='px-6 lg:max-w-[68.9375rem] w-full mb-30 md:mb-40 lg:mb-60'>
-        <div className='text-center text-4xl sm:text-6xl lg:text-[3.4375rem] font-semibold pb-16 sm:pb-20 md:pb-24 lg:pb-[122px]'>Questions?</div>
+        <div className='text-center text-[1.7rem] sm:text-6xl lg:text-[3.4375rem] font-semibold pb-16 sm:pb-20 md:pb-24 lg:pb-[122px]'>Questions?</div>
         <div className='flex flex-col w-full border-b-2 border-[#3D3D3D] mb-[30px]'>
           <div className='w-full flex justify-between items-center cursor-pointer pb-10' onClick={ handleSetFirstCollapseSwitch }>
             <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>Is AI ProShots free to use?</span>
