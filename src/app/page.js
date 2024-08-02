@@ -72,11 +72,20 @@ export default function Home() {
       </header>
 
       
-      <article className='w-full flex flex-col items-center py-[4rem] sm:py-[6rem] md:py-[8rem] lg:py-[10rem]'>
-        <h1 className='z-0 font-semibold text-[--theme-gray] text-3xl sm:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1>
-        <div className='z-1 relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-10px] md:top-[-20px] lg:top-[-30px] xl:top-[-40px] flex justify-around items-end'>
-          <span className='hidden sm:block text-xs sm:text-sm md:text-base text-white'>Unleash the power of AI.</span>
-          <span className='hidden sm:block tittle-line h-[1px] md:h-[2px] w-40 bg-white mb-1 lg:mb-4'/>
+      <article className='w-full flex flex-col items-center '>
+        {/* <h1 className='z-0 font-semibold text-[--theme-gray] text-3xl sm:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1> */}
+        <Image
+          className="h-[30rem] object-cover w-full"
+          src="/home/flowers-wall.png"
+          width={0}
+          height={0}
+          sizes='100%'
+          priority
+          alt="AI picture"
+        />
+        <div className='z-1 relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-10px] md:top-[-20px] lg:top-[-30px] xl:top-[-40px] flex justify-around items-center'>
+          <span className='sm:block text-xs sm:text-sm md:text-base text-white'>AI ProShots - Unleash the power of AI.</span>
+          <span className='sm:block tittle-line h-[1px] md:h-[2px] w-[8%] bg-white'/>
         </div>
       </article>
       
@@ -228,7 +237,7 @@ export default function Home() {
             <div>
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
-                src="/home/default-product.png"
+                src="/home/product-with-flowers.png"
                 alt=""
                 width={0}
                 height={0}
@@ -252,8 +261,7 @@ export default function Home() {
         </article>
       </div>
 
-
-      <article className='text-white bg-[--bg-shallow-blue] w-full grid grid-cols-4 mb-16 sm:mb-32'>
+      {/* <article className='text-white bg-[--bg-shallow-blue] w-full grid grid-cols-4 mb-16 sm:mb-32'>
         <div className='inline bg-[--bg-blue] col-span-4 md:col-span-3 px-6 py-14 lg:pl-[4.625rem] lg:pr-[3.125rem]'>
           <p className='text-base sm:text-2xl md:text-3xl lg:text-[3.4375rem] pb-4'>Why did the chicken cross the road?</p>
           <p className='text-base sm:text-2xl md:text-3xl lg:text-[3.4375rem] pb-14'>To get our FREE tier!</p>
@@ -262,7 +270,7 @@ export default function Home() {
           </p>
           <div className='rounded-[50px] sm:py-3 md:py-5 bg-white w-full md:w-[18.75rem] text-center text-black leading-[2.5rem] sm:leading-[3.4375rem] text-base sm:text-xl md:text-2xl font-medium cursor-pointer'>Join Now</div>
         </div> 
-      </article>
+      </article> */}
       
       
       <div className='text-[1.3rem] sm:text-5xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center max-w-3xl mb-16 px-4 sm:px-0'>
