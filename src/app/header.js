@@ -1,0 +1,70 @@
+"use client"; // this is a client component
+import Image from 'next/image'
+import { useState } from 'react'
+import Link from 'next/link'
+
+const state = {
+  menuList: [
+    {title: 'How it works', path: ''},
+    {title: 'Blog', path: 'blogs'},
+    {title: 'Pricing', path: ''},
+    {title: 'Log in', path: ''}
+  ]
+}
+
+export default function Header() {
+  // miniMenu switch
+  let [menuCollapseSwitch, setMenuCollapse] = useState(false)
+  const handleSetMenuCollapseSwitch = () => setMenuCollapse(!menuCollapseSwitch)
+
+  return (
+    <header className="z-40 w-full items-center justify-between text-sm flex px-3 lg:px-12 sticky top-0 py-4 sm:pt-6 bg-white">
+      <div className=" bottom-0 left-0 flex h-auto items-end bg-gradient-to-t from-white via-white static ">
+        <a
+          className="pointer-events-auto flex place-items-center gap-2 p-0"
+          href="/"
+          rel=""
+        >
+          <Image
+            className='w-8 lg:w-10'
+            src="/home/logo.png"
+            sizes={100} 
+            alt="AI photos"
+            width={0}
+            height={0}
+            priority
+          />
+            <span className='font-semibold'>AI ProShots</span>
+        </a>
+      </div>
+      <ul className={`${menuCollapseSwitch ? collapsePaneStyle : 'lg:flex max-lg:hidden grow justify-end gap-x-8 mr-8'}`}>
+        {
+          state.menuList.map((menuItem, index) => {
+            return (
+              <li className='cursor-pointer group-max-md:leading-loos block px-3 py-4' key={index}>
+                <Link href={menuItem.path}>
+                  {menuItem.title}
+                </Link>
+              </li>
+            )
+          })
+        }
+      </ul>
+      <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
+        <div className='flex gap-x-8'>
+          <span className='text-[10px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Try it</span>
+          <Image
+            onClick={handleSetMenuCollapseSwitch}
+            className="w-6 h-6 lg:hidden"
+            src="/home/menu.png"
+            alt=""
+            width={0}
+            height={0}
+            sizes='100%'
+            priority
+          />
+        </div>
+      </nav>
+    </header>
+  )
+}

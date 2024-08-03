@@ -1,6 +1,7 @@
 "use client"; // this is a client component
 import Image from 'next/image'
 import { useState } from "react";
+import Link from 'next/link'
 import Collapse from './collapse.js'
 
 export const state = {
@@ -9,7 +10,7 @@ export const state = {
 
 const bgPotions = {
   backgroundPosition: 'left top, right top, right bottom, left bottom',
-  backgroundSize: '15%, 15%, 15% 40%' 
+  backgroundSize: '15%, 15%, 15% 40%'
   // 21%, 31%, 15% 21%;
 }
 const collapsePaneStyle = 'z-3 top-[63px] sm:top-[55px] absolute left-[0] w-full bg-white max-lg:block text-red rounded-b-2xl shadow-xl'
@@ -24,53 +25,9 @@ export default function Home() {
   const handleSetThirdCollapseSwitch = () => setThirdCollapseSwitch(!thirdCollapseSwitch)
   let [fourthCollapseSwitch, setFourthCollapseSwitch] = useState(false)
   const handleSetFourthCollapseSwitch = () => setFourthCollapseSwitch(!fourthCollapseSwitch)
-  // miniMenu switch
-  let [menuCollapseSwitch, setMenuCollapse] = useState(false)
-  const handleSetMenuCollapseSwitch = () => setMenuCollapse(!menuCollapseSwitch)
+
   return (
     <div className={`flex min-h-screen flex-col items-center justify-between`}>
-      <header className="z-40 w-full items-center justify-between text-sm flex px-3 lg:px-12 sticky top-0 py-4 sm:pt-6 bg-white">
-        <div className=" bottom-0 left-0 flex h-auto items-end bg-gradient-to-t from-white via-white static ">
-          <a
-            className="pointer-events-auto flex place-items-center gap-2 p-0"
-            href="/"
-            rel=""
-          >
-            <Image
-              className='w-8 lg:w-10'
-              src="/home/logo.png"
-              sizes={100} 
-              alt="AI photos"
-              width={0}
-              height={0}
-              priority
-            />
-              <span className='font-semibold'>AI ProShots</span>
-          </a>
-        </div>
-        <ul className={`${menuCollapseSwitch ? collapsePaneStyle : 'lg:flex max-lg:hidden grow justify-end gap-x-8 mr-8'}`}>
-          <li className='cursor-pointer group-max-md:leading-loos block px-3 py-4'> How it works </li>
-          <li className='cursor-pointer group-max-md:leading-loos block px-3 py-4'> Pricing </li>
-          <li className='cursor-pointer group-max-md:leading-loos block px-3 py-4'> Contact us </li>
-          <li className='cursor-pointer group-max-md:leading-loos block px-3 py-4'> Log in </li>
-        </ul>
-        <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
-          <div className='flex gap-x-8'>
-            <span className='text-[10px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Try it</span>
-            <Image
-              onClick={handleSetMenuCollapseSwitch}
-              className="w-6 h-6 lg:hidden"
-              src="/home/menu.png"
-              alt=""
-              width={0}
-              height={0}
-              sizes='100%'
-              priority
-            />
-          </div>
-        </nav>
-      </header>
-
       
       <article className='w-full flex flex-col items-center '>
         {/* <h1 className='z-0 font-semibold text-[--theme-gray] text-3xl sm:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1> */}
@@ -369,18 +326,6 @@ export default function Home() {
         </div>
       </article>
 
-      <footer className='bg-[--theme-darkblue] w-full text-white py-[3.5rem]'>
-        <div className='text-center text-2xl sm:text-[2rem] font-semibold sm:mb-[7.1875rem]'>AI ProShots</div>
-        <article className='flex justify-around max-sm:hidden'>
-          <div className='flex gap-x-[4.125rem] text-sm'>
-            <span className='cursor-pointer'> Terms & Conditions </span>
-            <span className='cursor-pointer'> Privacy Policy </span>
-            <span className='cursor-pointer'> Sitemap </span>
-            <span className='cursor-pointer'> Contact Us </span>
-          </div>
-          <span>© 2023 AI ProShots All Rights Reserved</span>
-        </article>
-      </footer>
     </div>
   )
 }
