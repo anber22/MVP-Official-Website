@@ -13,7 +13,6 @@ const bgPotions = {
   backgroundSize: '15%, 15%, 15% 40%'
   // 21%, 31%, 15% 21%;
 }
-const collapsePaneStyle = 'z-3 top-[63px] sm:top-[55px] absolute left-[0] w-full bg-white max-lg:block text-red rounded-b-2xl shadow-xl'
 export default function Home() {
   let [collapsesSwitch, toggleCollapseSwitch] = useState( [ false, true, false ] )
   // collapses switch
@@ -28,7 +27,6 @@ export default function Home() {
 
   return (
     <div className={`flex min-h-screen flex-col items-center justify-between`}>
-      
       <article className='w-full flex flex-col items-center '>
         {/* <h1 className='z-0 font-semibold text-[--theme-gray] text-3xl sm:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1> */}
         <Image
@@ -188,29 +186,27 @@ export default function Home() {
         <article className='pb-20 sm:pb-40 md:pb-60 lg:pb-80'>
           <p className='text-center text-[1.3rem] sm:text-[3.4375rem] row-start-1 col-start-1 col-end-2 pb-[3.125rem]'>AI ProShots vs. Others</p>
           <p className='text-center text-base sm:text-2xl md:text-3xl pb-10 sm:pb-16 md:pb-[5.3125rem]'>Real experiment done with the same image, same prompt, and same time.</p>
-          <div className='grid grid-cols-2 gap-x-4 md:gap-x-[6.5rem] pb-16 sm:pb-20 md:pb-24 lg:pb-[8.25rem]'>
+          <div className='grid grid-cols-2 pb-16 gap-x-4 md:gap-x-[6.5rem] sm:pb-20 md:pb-24 lg:pb-[8.25rem]'>
             <div className='text-base sm:text-3xl md:text-4xl text-center pb-4'>AI ProShots</div>
             <div className='text-base sm:text-3xl md:text-4xl text-center pb-4'>Another Website</div>
             <div>
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
                 src="/home/product-with-flowers.png"
-                alt=""
                 width={0}
                 height={0}
                 sizes='100%'
-                priority
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
             <div>
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
                 src="/home/default-product.png"
-                alt=""
                 width={0}
                 height={0}
                 sizes='100%'
-                priority
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
           </div>

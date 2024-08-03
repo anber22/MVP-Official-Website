@@ -6,11 +6,12 @@ import Link from 'next/link'
 const state = {
   menuList: [
     {title: 'How it works', path: ''},
-    {title: 'Blog', path: 'blogs'},
+    {title: 'Blog', path: 'blog'},
     {title: 'Pricing', path: ''},
     {title: 'Log in', path: ''}
   ]
 }
+const collapsePaneStyle = 'z-3 top-[63px] sm:top-[55px] absolute left-[0] w-full bg-white max-lg:block text-red rounded-b-2xl shadow-xl'
 
 export default function Header() {
   // miniMenu switch
@@ -52,7 +53,7 @@ export default function Header() {
       </ul>
       <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
         <div className='flex gap-x-8'>
-          <span className='text-[10px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Try it</span>
+          <span className='text-[10px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Get Access</span>
           <Image
             onClick={handleSetMenuCollapseSwitch}
             className="w-6 h-6 lg:hidden"
