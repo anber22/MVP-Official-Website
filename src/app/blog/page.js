@@ -18,17 +18,17 @@ function Blog () {
   return (
     <div className="min-h-screen">
       <article className='w-full flex flex-col'>
-        <p className='z-0 ml-[138px] font-semibold text-[--theme-gray] text-7xl sm:text-8xl md:text-[10.5rem] lg:text-[12.5rem] xl:text-[18.75rem]'>Blogs</p>
-        <div className='z-1 mt-[-4rem] relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-10px] md:top-[-20px] lg:top-[-30px] xl:top-[-40px] flex items-end'>
-          <span className='text-xs ml-[138px] sm:block sm:text-sm md:text-base text-white'>Resources about how AI can help you improve Product Images and Sales</span>
+        <p className='z-0 ml-[10dvw] font-semibold text-[--theme-gray] text-[5rem] sm:text-[8rem] md:text-[10.5rem] lg:text-[12.5rem] xl:text-[18.75rem]'>Blogs</p>
+        <div className='z-1 mt-[-4rem] relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-61px] md:top-[-71px] lg:top-[-71px] xl:top-[-105px] flex items-end'>
+          <span className='text-xs ml-[11dvw] sm:block sm:text-sm md:text-base text-white'>Resources about how AI can help you improve Product Images and Sales</span>
         </div>
       </article>
 
-      <div style={gridAuto} className='px-40 pt-40'>
+      <div style={gridAuto} className='px-[10dvw] pt-10 md:pt-40'>
         {
-          lists.map((item) => {
+          lists.map((item, index) => {
             return (
-              <article className="flex flex-col border border-solid border-black">
+              <article key={index} className="flex flex-col border border-solid border-black">
                 <Image
                   className="h-max-[300px] object-cover w-full"
                   src={item.pic}

@@ -30,7 +30,7 @@ export default function Home() {
       <article className='w-full flex flex-col items-center '>
         {/* <h1 className='z-0 font-semibold text-[--theme-gray] text-3xl sm:text-5xl md:text-8xl lg:text-[9.5rem] xl:text-[12.5rem]'>AI ProShots</h1> */}
         <Image
-          className="h-[30rem] object-cover w-full"
+          className="h-[30rem] object-cover object-[right_center] w-full"
           src="/home/flowers-wall.png"
           width={0}
           height={0}
@@ -193,6 +193,7 @@ export default function Home() {
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
                 src="/home/product-with-flowers.png"
+                alt=""
                 width={0}
                 height={0}
                 sizes='100%'
@@ -203,6 +204,7 @@ export default function Home() {
               <Image
                 className="block w-auto rounded-[30px] col-start-2 col-end-2 row-start-1 row-end-3"
                 src="/home/default-product.png"
+                alt=""
                 width={0}
                 height={0}
                 sizes='100%'
