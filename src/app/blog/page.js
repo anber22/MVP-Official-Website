@@ -11,20 +11,20 @@ function Blog () {
   // style
   const gridAuto = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(0, 300px))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 300px))',
     gap: '100px'
   }
 
   return (
     <div className="min-h-screen">
-      <article className='w-full flex flex-col'>
+      <article className='w-full flex flex-col justify-center relative'>
         <p className='z-0 ml-[10dvw] font-semibold text-[--theme-gray] text-[5rem] sm:text-[8rem] md:text-[10.5rem] lg:text-[12.5rem] xl:text-[18.75rem]'>Blogs</p>
-        <div className='z-1 mt-[-4rem] relative w-full h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-61px] md:top-[-71px] lg:top-[-71px] xl:top-[-105px] flex items-end'>
+        <div className='z-1 relative w-full h-[30px] sm:h-[32px] md:h-[67px] bg-[--theme-darkblue] top-[-60px] sm:top-[-101px] md:top-[-131px] lg:top-[-142px] xl:top-[-178px] flex items-end'>
           <span className='text-xs ml-[11dvw] sm:block sm:text-sm md:text-base text-white'>Resources about how AI can help you improve Product Images and Sales</span>
         </div>
       </article>
 
-      <div style={gridAuto} className='px-[10dvw] pt-10 md:pt-40'>
+      <div style={gridAuto} className='px-[10dvw] py-10 md:py-30'>
         {
           lists.map((item, index) => {
             return (

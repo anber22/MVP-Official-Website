@@ -212,7 +212,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='text-base sm:text-xl md:text-2xl w-full text-center'>AI ProShots is aimed to generate professional quality images.</div>
+          {/* <div className='text-base sm:text-xl md:text-2xl w-full text-center'>AI ProShots is aimed to generate professional quality images.</div> */}
         </article>
       </div>
 
@@ -228,10 +228,10 @@ export default function Home() {
       </article> */}
       
       
-      <div className='text-[1.3rem] sm:text-5xl md:text-5xl lg:text-[3.4375rem] font-semibold text-center max-w-3xl mb-16 px-4 sm:px-0'>
+      <div className='text-[1.3rem] font-semibold leading-[5rem] text-center max-w-3xl mb-16 px-4 sm:px-0 sm:text-[3rem] md:text-[3rem] lg:text-[3.4375rem]'>
         How does Generative AI help with Product Photos?
       </div>
-      <div className='text-base sm:text-2xl md:text-3xl lg:text-4xl max-w-[68.9375rem] mb-16 sm:mb-32 px-8 sm:px-10 lg:px-12 xl:px-0'>
+      <div className='text-[1rem] sm:text-[1.5rem] md:text-[1.875rem] lg:text-[2.25rem] leading-[3.5rem] max-w-[68.9375rem] mb-16 sm:mb-32 px-8 sm:px-10 lg:px-12 xl:px-0'>
         AI inspires and augments human creativity.
         It helps generate new ideas and designs. Meanwhile,
         it automates and accelerates the process of testing different ideas.
