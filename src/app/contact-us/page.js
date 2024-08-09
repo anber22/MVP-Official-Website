@@ -1,27 +1,68 @@
- "use client"; // this is a client component
+"use client"; // this is a client component
+import { useState, route } from 'react'
+import Link from 'next/link'
 
 function ContactUs () {
+  const [submitted, setSubmitted] = useState(false)
+  const [btnDisabled, setBtnDisabled] = useState(false)
+  const handleSubmit = () => {
+    setBtnDisabled(true)
+    setTimeout(() => {
+      setSubmitted(true)
+    }, 1500)
+  }
+  const goHome = () => {
+    
+  }
   return (
     <div className="min-h-screen">
       <div className='px-[10dvw] py-10 md:py-30'>
-        <p className="text-[36px] md:mt-[100px] mb-[80px]">Contact Us</p>
-        <article>
-          <div className="flex">
-            <div className="flex">
-              <div className="mr-4">Your Name</div>
-              <input className="mr-16" type="text" />
+        {
+          !submitted ?
+          <article>
+            <p className="text-[36px] md:mt-[100px] mb-[80px]">Contact Us</p>
+            <article>
+              <div className="flex">
+                <div className="flex">
+                  <div className="mr-4">Your Name</div>
+                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg mr-16" type="text" />
+                </div>
+                <div className="flex">
+                  <div className="mr-4">Email</div>
+                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg " type="email" name="" id="" />
+                </div>
+              </div>
+              <div className="py-[30px]">
+                <p className="pb-[20px]">Message</p>
+                <textarea className="px-2 border border-1 border-[#C0C0C0] rounded-lg md:min-w-[670px]" name="" id="" cols="30" rows="10"></textarea>
+              </div>
+              <button
+                disabled={false}
+                className="
+                  cursor-pointer text-sm
+                  text-white w-[100px] h-[30px] rounded-md
+                  border-black border-[1px] shadow-lg shadow-black/30
+                  bg-[#3B73E8]
+                  hover:bg-blue-400 active:bg-blue-400 focus:ring
+                "
+                onClick={handleSubmit}
+                type="button"
+              >
+                Submit
+              </button>
+            </article>
+          </article>
+          :
+          <article>
+            <div className='md:text-[36px] md:mt-[100px] mb-[80px]'>
+              <p className="">Thank you for contacting us!</p>
+              <p className="">We will get back to you at our earliest convenience.</p>
             </div>
-            <div className="flex">
-              <div className="mr-4">Email</div>
-              <input type="email" name="" id="" />
-            </div>
-          </div>
-          <div>
-            <p>Message</p>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-          </div>
-          <button className="text-sm text-white w-[100px] h-[30px] rounded-md border-black border-[1px] shadow-lg shadow-black/30 bg-[#3B73E8]">Submit</button>
-        </article>
+            <Link href="/">
+              <p className='cursor-pointer text-sm text-[#3D3D3D] underline'>Back to Home Page</p>
+            </Link>
+          </article>
+        }
       </div>
     </div>
   )

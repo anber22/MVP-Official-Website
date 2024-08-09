@@ -53,7 +53,7 @@ export default function Header() {
       </ul>
       <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
         <div className='flex gap-x-8'>
-          <span className='text-[14px] md:text-[18px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white'>Get Access</span>
+          <button className='text-[14px] md:text-[18px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white hover:bg-blue-400 active:bg-blue-400 focus:ring'>Get Access</button>
           <Image
             onClick={handleSetMenuCollapseSwitch}
             className="w-6 h-6 lg:hidden"
