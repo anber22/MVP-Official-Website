@@ -16,7 +16,7 @@ function ContactUs () {
   }
   return (
     <div className="min-h-screen">
-      <div className='px-[10dvw] py-10 md:py-30'>
+      <div className="px-[10dvw] py-10 md:py-30">
         {
           !submitted ?
           <article>
@@ -54,12 +54,12 @@ function ContactUs () {
           </article>
           :
           <article>
-            <div className='md:text-[36px] md:mt-[100px] mb-[80px]'>
+            <div className="md:text-[36px] md:mt-[100px] mb-[80px]">
               <p className="">Thank you for contacting us!</p>
               <p className="">We will get back to you at our earliest convenience.</p>
             </div>
             <Link href="/">
-              <p className='cursor-pointer text-sm text-[#3D3D3D] underline'>Back to Home Page</p>
+              <p className="cursor-pointer text-sm text-[#3D3D3D] underline">Back to Home Page</p>
             </Link>
           </article>
         }

@@ -27,7 +27,7 @@ export default function Header() {
           rel=""
         >
           <Image
-            className='w-8 lg:w-10'
+            className="w-8 lg:w-10"
             src="/home/logo.png"
             sizes={100} 
             alt="AI photos"
@@ -35,14 +35,14 @@ export default function Header() {
             height={0}
             priority
           />
-            <span className='font-semibold text-[18px] md:text-2xl'>AI ProShots</span>
+            <span className="font-semibold text-[18px] md:text-2xl">AI ProShots</span>
         </a>
       </div>
       <ul className={`${menuCollapseSwitch ? collapsePaneStyle : 'lg:flex max-lg:hidden grow justify-end gap-x-8 mr-8'}`}>
         {
           state.menuList.map((menuItem, index) => {
             return (
-              <li className='cursor-pointer text-[18px] group-max-md:leading-loos block px-3 py-4' key={index}>
+              <li className="cursor-pointer text-[18px] group-max-md:leading-loos block px-3 py-4" key={index}>
                 <Link href={menuItem.path}>
                   {menuItem.title}
                 </Link>
@@ -51,9 +51,9 @@ export default function Header() {
           })
         }
       </ul>
-      <nav className='flex flex-between gap-x-11 text-[1.125rem]'>
-        <div className='flex gap-x-8'>
-          <button className='text-[14px] md:text-[18px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white hover:bg-blue-400 active:bg-blue-400 focus:ring'>Get Access</button>
+      <nav className="flex flex-between gap-x-11 text-[1.125rem]">
+        <div className="flex gap-x-8">
+          <button className="text-[14px] md:text-[18px] cursor-pointer block bg-[--theme-blue] px-6 md:px-[40px] lg:px-[60px] py-[3px] rounded-[50px] text-white hover:bg-blue-400 active:bg-blue-400 focus:ring">Get Access</button>
           <Image
             onClick={handleSetMenuCollapseSwitch}
             className="w-6 h-6 lg:hidden"
@@ -61,7 +61,7 @@ export default function Header() {
             alt=""
             width={0}
             height={0}
-            sizes='100%'
+            sizes="100%"
             priority
           />
         </div>

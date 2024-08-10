@@ -3,7 +3,7 @@
 function TermsAndConditions () {
   return (
     <div className="min-h-screen">
-      <div className='px-[10dvw] py-10 md:py-30'>
+      <div className="px-[10dvw] py-10 md:py-30">
         <p className="text-[36px] md:mt-[100px] mb-[80px]">Terms and Conditions</p>
         <p className="mb-[20px]">Protecting your private information is our priority. This Statement of Privacy applies to AIProShots.com and AI ProShots Inc and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to AI ProShots Inc include AIProShots.com and AI ProShots. The AI ProShots website generates and revolutionizes product images with AI and its related technologies. By using the AI ProShots website, you consent to the data practices described in this statement.</p>
         <p className="mb-[20px]">Collection of your Personal Information</p>
