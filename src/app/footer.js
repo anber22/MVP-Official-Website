@@ -31,7 +31,7 @@ export default function Header() {
             })
           }
         </div>
-        <span>© 2024 AI ProShots All Rights Reserved</span>
+        <span className="px-3 py-4">© 2024 AI ProShots All Rights Reserved</span>
       </article>
     </footer>
   )

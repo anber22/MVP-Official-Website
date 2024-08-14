@@ -1,15 +1,33 @@
 "use client"; // this is a client component
-import { useState, route } from 'react'
-import Link from 'next/link'
+import { useState, route } from "react"
+import Link from "next/link"
+import { NextResponse } from 'next/server'
 
 function ContactUs () {
   const [submitted, setSubmitted] = useState(false)
   const [btnDisabled, setBtnDisabled] = useState(false)
-  const handleSubmit = () => {
-    setBtnDisabled(true)
-    setTimeout(() => {
-      setSubmitted(true)
-    }, 1500)
+  const handleSubmit = async () => {
+    // setBtnDisabled(true)
+    // setTimeout(() => {
+    //   setSubmitted(true)
+    // }, 1500)
+    let data = {
+      "userEmail": "zhk@com.com",
+      "content": "zhk"
+    }
+    const res = await fetch("https://back-end-api.aiproshots.com/ai/email/contact-us", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImI1NjJiMDkzLTdmMzQtNDY1Yi05YjE0LWU4YmU2MWI4Mzc3YyJ9.dGSo9YtbdZ84tpqkQUtSk9r-MyxC6CBLBxpL9EovPpSO0NzGoSCCzoLTCGKnz8E9L5zCAefuCyigB_1UnyKteA'
+      },
+      // mode: 'cors',
+      body: JSON.stringify(data),
+    }).then((response) => {
+      console.log(response.json(), 'sora', response.ok());
+      
+      return response.json()
+    })
   }
   const goHome = () => {
     
@@ -25,16 +43,16 @@ function ContactUs () {
               <div className="flex">
                 <div className="flex">
                   <div className="mr-4">Your Name</div>
-                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg mr-16" type="text" />
+                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg sm:mr-16" type="text" />
                 </div>
                 <div className="flex">
-                  <div className="mr-4">Email</div>
+                  <div className="sm:mr-4">Email</div>
                   <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg " type="email" name="" id="" />
                 </div>
               </div>
               <div className="py-[30px]">
                 <p className="pb-[20px]">Message</p>
-                <textarea className="px-2 border border-1 border-[#C0C0C0] rounded-lg md:min-w-[670px]" name="" id="" cols="30" rows="10"></textarea>
+                <textarea className="px-2 border border-1 border-[#C0C0C0] rounded-lg w-full sm:min-w-[500px] md:min-w-[670px]" name="" id="" cols="30" rows="10"></textarea>
               </div>
               <button
                 disabled={false}

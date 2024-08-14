@@ -6,8 +6,9 @@ import Link from 'next/link'
 const state = {
   menuList: [
     {title: 'How it works', path: ''},
-    {title: 'Blog', path: 'blog'},
     {title: 'Pricing', path: ''},
+    {title: 'Contact us', path: 'contact-us'},
+    {title: 'Blog', path: 'blog'},
     {title: 'Log in', path: ''}
   ]
 }

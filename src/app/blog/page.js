@@ -1,5 +1,5 @@
 "use client"; // this is a client component
-import Image from 'next/image'
+import Image from "next/image"
 
 function Blog () {
   // blog list
@@ -11,15 +11,15 @@ function Blog () {
   // style
   const gridAuto = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 300px))',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
     gap: '100px'
   }
 
   return (
     <div className="min-h-screen">
       <article className="w-full flex flex-col justify-center relative">
-        <p className="z-0 ml-[10dvw] font-semibold text-[--theme-gray] text-[5rem] sm:text-[8rem] md:text-[10.5rem] lg:text-[12.5rem] xl:text-[18.75rem]">Blogs</p>
-        <div className="z-1 relative w-full h-[30px] sm:h-[32px] md:h-[67px] bg-[--theme-darkblue] top-[-60px] sm:top-[-101px] md:top-[-131px] lg:top-[-142px] xl:top-[-178px] flex items-end">
+        <p className="z-0 ml-[10dvw] font-semibold text-[--theme-gray] text-[6rem] sm:text-[8rem] md:text-[10.5rem] lg:text-[12.5rem] xl:text-[18.75rem]">Blogs</p>
+        <div className="z-1 relative w-full h-[40px] sm:h-[52px] md:h-[67px] bg-[--theme-darkblue] top-[-77px] sm:top-[-101px] md:top-[-131px] lg:top-[-142px] xl:top-[-178px] flex items-end">
           <span className="text-xs ml-[11dvw] sm:block sm:text-sm md:text-base text-white">Resources about how AI can help you improve Product Images and Sales</span>
         </div>
       </article>
