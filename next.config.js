@@ -13,7 +13,7 @@ const nextConfig = {
       {
         source: '/img/:path*',
         destination: 'https://aiproshots-image.s3.amazonaws.com/:path*'
-      }
+      },
     ]
   },
   serverRuntimeConfig: {

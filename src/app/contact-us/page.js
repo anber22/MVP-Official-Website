@@ -7,28 +7,29 @@ function ContactUs () {
   const [submitted, setSubmitted] = useState(false)
   const [btnDisabled, setBtnDisabled] = useState(false)
   const handleSubmit = async () => {
-    // setBtnDisabled(true)
-    // setTimeout(() => {
-    //   setSubmitted(true)
-    // }, 1500)
+    setBtnDisabled(true)
     let data = {
       "userEmail": "zhk@com.com",
       "content": "zhk"
     }
-    const res = await fetch("https://back-end-api.aiproshots.com/ai/email/contact-us", {
+    const res = await fetch("mvp/ai/email/contact-us", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImI1NjJiMDkzLTdmMzQtNDY1Yi05YjE0LWU4YmU2MWI4Mzc3YyJ9.dGSo9YtbdZ84tpqkQUtSk9r-MyxC6CBLBxpL9EovPpSO0NzGoSCCzoLTCGKnz8E9L5zCAefuCyigB_1UnyKteA'
       },
-      // mode: 'cors',
       body: JSON.stringify(data),
-    }).then((response) => {
-      console.log(response.json(), 'sora', response.ok());
-      
-      return response.json()
-    })
+    }).then((response) => response.json() )
+
+    try {
+      if (res.code === 201) setSubmitted(true)
+      else console.log(res)
+      setBtnDisabled(true)
+    } catch (error) {
+      console.log(res)
+    }
   }
+
   const goHome = () => {
     
   }
