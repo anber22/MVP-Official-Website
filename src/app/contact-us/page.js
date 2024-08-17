@@ -1,22 +1,28 @@
 "use client"; // this is a client component
-import { useState, route } from "react"
+import { useState, route, useRef } from "react"
 import Link from "next/link"
 import { NextResponse } from 'next/server'
 
 function ContactUs () {
   const [submitted, setSubmitted] = useState(false)
   const [btnDisabled, setBtnDisabled] = useState(false)
+  const info = useRef()
+  
   const handleSubmit = async () => {
     setBtnDisabled(true)
+    // info.current[0].value
+    if (!info.current[1].value || !info.current[2].value) {
+      return alert('Please perfect the form')
+    }
     let data = {
-      "userEmail": "zhk@com.com",
-      "content": "zhk"
+      "userEmail": info.current[1].value,
+      "content": info.current[2].value
     }
     const res = await fetch("mvp/ai/email/contact-us", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImI1NjJiMDkzLTdmMzQtNDY1Yi05YjE0LWU4YmU2MWI4Mzc3YyJ9.dGSo9YtbdZ84tpqkQUtSk9r-MyxC6CBLBxpL9EovPpSO0NzGoSCCzoLTCGKnz8E9L5zCAefuCyigB_1UnyKteA'
+        // 'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImI1NjJiMDkzLTdmMzQtNDY1Yi05YjE0LWU4YmU2MWI4Mzc3YyJ9.dGSo9YtbdZ84tpqkQUtSk9r-MyxC6CBLBxpL9EovPpSO0NzGoSCCzoLTCGKnz8E9L5zCAefuCyigB_1UnyKteA'
       },
       body: JSON.stringify(data),
     }).then((response) => response.json() )
@@ -41,20 +47,22 @@ function ContactUs () {
           <article>
             <p className="text-[36px] md:mt-[100px] mb-[80px]">Contact Us</p>
             <article>
-              <div className="flex">
+              <form ref={info}>
                 <div className="flex">
-                  <div className="mr-4">Your Name</div>
-                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg sm:mr-16" type="text" />
+                  <div className="flex">
+                    <div className="mr-4">Your Name</div>
+                    <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg sm:mr-16" type="text" />
+                  </div>
+                  <div className="flex">
+                    <div className="sm:mr-4">Email</div>
+                    <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg " type="email" name="" id="" />
+                  </div>
                 </div>
-                <div className="flex">
-                  <div className="sm:mr-4">Email</div>
-                  <input className="px-2 border border-1 border-[#C0C0C0] rounded-lg " type="email" name="" id="" />
+                <div className="py-[30px]">
+                  <p className="pb-[20px]">Message</p>
+                  <textarea className="px-2 border border-1 border-[#C0C0C0] rounded-lg w-full sm:min-w-[500px] md:min-w-[670px]" name="" id="" cols="30" rows="10"></textarea>
                 </div>
-              </div>
-              <div className="py-[30px]">
-                <p className="pb-[20px]">Message</p>
-                <textarea className="px-2 border border-1 border-[#C0C0C0] rounded-lg w-full sm:min-w-[500px] md:min-w-[670px]" name="" id="" cols="30" rows="10"></textarea>
-              </div>
+              </form>
               <button
                 disabled={false}
                 className="
